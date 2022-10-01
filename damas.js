@@ -23,14 +23,14 @@ function criaTabuleiro() {
             celula.style.height = `${tamanhoCelula}px`;
             if (i % 2 == j % 2) {
                 celula.addEventListener('dragover', allowDrop)
-                celula.style.backgroundColor = 'black';
+                celula.style.backgroundColor = 'black.png';
                 if (i * 8 + j <= 24) {
-                    const peca = criaPeca('black')
+                    const peca = criaPeca('black,png')
                     peca.id = `b-i${i}-j${j}`
                     celula.append(peca)
                     celula.removeEventListener('dragover', allowDrop)
                 } else if (i * 8 + j >= 40) {
-                    const peca = criaPeca('red')
+                    const peca = criaPeca('red.png')
                     peca.id = `r-i${i}-j${j}`
                     peca.draggable = true
                     celula.append(peca)
